@@ -1,39 +1,4 @@
-markdown
-Copy code
-## Setup
 
-1. **Change Directory**
-   ```bash
-   cd client
-Navigate into the client directory where the React frontend application is located.
-
-Install Dependencies
-
-bash
-Copy code
-npm install
-Install all necessary dependencies listed in package.json to set up the project environment.
-
-Start Development Server
-
-bash
-Copy code
-npm start
-Start the development server and access the application at http://localhost:3000.
-
-Backend Make sure the backend server is running and accessible at http://localhost:8080. This can be done with a separate setup process if applicable.
-
-perl
-Copy code
-
-This format allows you to provide context and additional instructions following each command block.
-
-
-
-
-
-
-You said:
 # Cryptocurrency Web App
 
 ## Overview
