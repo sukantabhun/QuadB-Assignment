@@ -40,6 +40,11 @@ This repository contains the code for a cryptocurrency web application built wit
 
 ### **Frontend**
 
-1. **Install Dependencies**
+1.**Change directory **
+   ```bash
+   cd client
+
+
+2. **Install Dependencies**
    ```bash
    npm install
