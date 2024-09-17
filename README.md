@@ -5,7 +5,7 @@
 This repository contains the code for a cryptocurrency web application built with **React** on the frontend. The app fetches and displays cryptocurrency data, supports dark/light mode, and includes a loading spinner while data is being fetched.
 
 ## Features
-- Fetch and display top 10 cryptocurrencies.
+- Fetch and display top 10 cryptocurrencies using api (https://api.wazirx.com/api/v2/tickers).
 - Filter cryptocurrencies based on selected type.
 - Toggle between dark and light mode.
 - Show a loading spinner while fetching data.
@@ -91,7 +91,7 @@ This repository contains the code for a cryptocurrency web application built wit
 ### **Backend**
 
 - **API Endpoints**
-  - **Get Top 10 Cryptocurrencies**
+  -  **Get Top 10 Cryptocurrencies**
     - **Endpoint**: `/api/getTop10/`
     - **Method**: `GET`
     - **Description**: Retrieves a list of the top 10 cryptocurrencies.
