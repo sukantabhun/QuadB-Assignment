@@ -1,85 +1,45 @@
-API Documentation
-1. Get Top 10 Cryptocurrencies
-Endpoint: /api/getTop10/
-Method: GET
-Description: Retrieves a list of the top 10 cryptocurrencies from the backend server.
-Request
-URL: http://localhost:8080/api/getTop10/
-Headers: None required.
-Response
-Content-Type: application/json
+# Cryptocurrency Web App
 
-Status Codes:
+## Overview
+This repository contains the code for a cryptocurrency web application built with **React** on the frontend. The app fetches and displays cryptocurrency data, supports dark/light mode, and includes a loading spinner while data is being fetched.
 
-200 OK - Successful request.
-500 Internal Server Error - Server-side error.
-Response Body: Array of cryptocurrency objects.
+## Features
+- Fetch and display top 10 cryptocurrencies.
+- Filter cryptocurrencies based on selected type.
+- Toggle between dark and light mode.
+- Show a loading spinner while fetching data.
 
-json
-Copy code
-[
-  {
-    "_id": "60f5d9c1c5291a123456789",
-    "name": "Bitcoin",
-    "base_unit": "btc",
-    "buy": 5000000,
-    "sell": 4990000,
-    "last": 5050000
-  },
-  {
-    "_id": "60f5d9c1c5291a123456780",
-    "name": "Ethereum",
-    "base_unit": "eth",
-    "buy": 300000,
-    "sell": 299000,
-    "last": 305000
-  }
-]
-Error Handling
-Network Errors: If the fetch request fails (e.g., due to network issues), an error is logged, and the loading state is updated accordingly.
-Routes
-Frontend Routes
-The Content component does not handle routing directly but relies on the overall application routing to display content within the page.
+## Project Structure
 
-Backend Routes
-Route: /api/getTop10/
-Purpose: To fetch and return the top 10 cryptocurrencies.
-Method: GET
-Response: JSON array of cryptocurrency data.
-Database Schema
-Cryptocurrency Collection
-The MongoDB database contains a collection named cryptocurrencies. Each document in this collection has the following structure:
+### **Frontend**
 
-Document Structure
-json
-Copy code
-{
-  "_id": "ObjectId",
-  "name": "String",
-  "base_unit": "String",
-  "buy": "Number",
-  "sell": "Number",
-  "last": "Number"
-}
-Fields
-_id: Unique identifier for the cryptocurrency.
-name: Name of the cryptocurrency (e.g., Bitcoin, Ethereum).
-base_unit: The base unit of the cryptocurrency (e.g., BTC, ETH).
-buy: The current buy price of the cryptocurrency.
-sell: The current sell price of the cryptocurrency.
-last: The last traded price of the cryptocurrency.
-Component Breakdown
-State
-data: Stores the fetched cryptocurrency data.
-isLoading: Indicates whether the data is being fetched.
-Lifecycle Methods
-componentDidMount(): Initiates data fetching when the component mounts.
-Methods
-getData(): Fetches data from the API and handles the loading state.
-Rendering
-Loader: Displays a loading spinner while data is being fetched.
-Table: Displays cryptocurrency data in a table format, with conditional styling based on dark mode.
-Context Providers
-DisplayContext: Provides dark mode styling.
-CryptoContext: Provides the selected cryptocurrency for filtering.
-RefetchContext: Allows triggering data refetch.
+- **Components**
+  - `Content`: Fetches and displays cryptocurrency data.
+  - `Header`: Displays the header of the application.
+  - `Footer`: Displays the footer of the application.
+  - `Loader`: Displays a loading spinner while data is being fetched.
+
+- **Contexts**
+  - `DisplayContext`: Manages the dark/light mode of the application.
+  - `CryptoContext`: Provides the selected cryptocurrency for filtering.
+  - `RefetchContext`: Allows triggering a refetch of data.
+
+- **Styles**
+  - `index.css`: Contains CSS styles for the `Content` component.
+
+### **Backend**
+
+- **API Endpoints**
+  - **Get Top 10 Cryptocurrencies**
+    - **Endpoint**: `/api/getTop10/`
+    - **Method**: `GET`
+    - **Description**: Retrieves a list of the top 10 cryptocurrencies.
+    - **Response**: JSON array of cryptocurrency objects.
+
+## Setup
+
+### **Frontend**
+
+1. **Install Dependencies**
+   ```bash
+   npm install
